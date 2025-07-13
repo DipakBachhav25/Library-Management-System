@@ -1,0 +1,93 @@
+{
+  "info": {
+    "name": "Library API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json "
+  },
+  "item": [
+    {
+      "name": "Get All Books",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/books",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "books"]
+        }
+      }
+    },
+    {
+      "name": "Add New Book",
+      "request": {
+        "method": "POST",
+        "url": {
+          "raw": "http://localhost:8080/api/books",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "books"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Quantitative Aptitude\",\n  \"author\": \"R. S. Aggarwal\",\n  \"isbn\": \"97-893-525-3402-9\",\n  \"available\": true\n}"
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Get Book by ID",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/books/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "books", "1"]
+        }
+      }
+    },
+    {
+      "name": "Delete Book by ID",
+      "request": {
+        "method": "DELETE",
+        "url": {
+          "raw": "http://localhost:8080/api/books/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "books", "1"]
+        }
+      }
+    },
+    {
+      "name": "Update Book Availability",
+      "request": {
+        "method": "PUT",
+        "url": {
+          "raw": "http://localhost:8080/api/books/1/availability",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "books", "1", "availability"]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "false"
+        },
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ]
+      }
+    }
+  ]
+}
